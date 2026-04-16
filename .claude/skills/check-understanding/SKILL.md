@@ -100,6 +100,12 @@ D) The rank of the matrix after transformation
 
 Wait for the user's answer before moving to the next question.
 
+Neutral presentation requirements:
+- Do not reveal or imply the correct option while asking.
+- If using AskUserQuestion/vscode_askQuestions, never set any option as recommended/preselected.
+- Keep options neutral and similarly styled (no wording like "best", "most likely", "recommended" that hints at correctness).
+- Vary correct-answer position across A/B/C/D to avoid predictable patterns.
+
 ### Step 5: Track and Score
 
 Keep a running tally:
@@ -153,6 +159,7 @@ Wait for the user's choice and act accordingly.
 - Avoid repeating questions on retakes until the question pool is exhausted. Once exhausted, reshuffle or rephrase questions for subsequent retakes.
 - Questions must be directly grounded in the lesson docs, not general knowledge.
 - Do not show the correct answer until after the user responds.
+- Never preselect, recommend, highlight, or otherwise bias any answer option during question presentation.
 - Keep question text concise. One or two sentences max.
 - Wrong options must be plausible. No joke answers.
 - If a phase has no lesson docs written yet (no `en.md` files found), tell the user: "Phase N does not have lesson content yet. Pick a completed phase to quiz on."

@@ -35,6 +35,12 @@ their score for that area (e.g. "Math & Statistics: 2/2") before moving to the
 next round. Keep commentary short. Do not explain the answers until the very
 end.
 
+Neutral presentation requirements:
+- While asking each question, do not reveal or imply which option is correct.
+- If using AskUserQuestion/vscode_askQuestions, never mark an option as recommended or preselected.
+- Keep all options stylistically neutral (no emphasis or language that hints at correctness).
+- Vary correct-answer position across A/B/C/D over the full quiz.
+
 ---
 
 ### Round 1 -- Math & Statistics
@@ -226,3 +232,5 @@ path: ~X hours across Y phases."
 
 Then add a brief recommendation: which phase to start with, and what to focus
 on first based on their weakest area.
+
+Important: treat all "Correct:" lines in this file as grading metadata only; do not show them while presenting questions.

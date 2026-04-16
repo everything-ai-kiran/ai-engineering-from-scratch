@@ -56,14 +56,18 @@ wsl --install -d Ubuntu-24.04
 We use `uv` — it's 10-100x faster than pip and handles virtual environments automatically.
 
 ```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
+# macOS (Homebrew-first)
+brew install uv python@3.12
+
+# Linux/WSL fallback
+# curl -LsSf https://astral.sh/uv/install.sh | sh
 
 uv python install 3.12
 
 uv venv
 source .venv/bin/activate  # or .venv\Scripts\activate on Windows
 
-uv pip install numpy matplotlib jupyter
+uv pip install --native-tls numpy matplotlib jupyter
 ```
 
 Verify:
@@ -83,11 +87,16 @@ print(f"Vector: {a}, dot product with itself: {np.dot(a, a)}")
 For TypeScript lessons (agents, MCP servers, web apps).
 
 ```bash
-curl -fsSL https://fnm.vercel.app/install | bash
-fnm install 22
-fnm use 22
+# macOS (Homebrew-first)
+brew install fnm pnpm
+eval "$(fnm env --use-on-cd --shell zsh)"
 
-npm install -g pnpm
+# Linux/WSL fallback
+# curl -fsSL https://fnm.vercel.app/install | bash
+
+fnm install 22
+fnm default 22
+fnm use 22
 
 node -e "console.log('Node', process.version)"
 ```
@@ -97,7 +106,11 @@ node -e "console.log('Node', process.version)"
 For performance-critical lessons (inference, systems).
 
 ```bash
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# macOS (Homebrew-first)
+brew install rust
+
+# Linux/WSL fallback
+# curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 rustc --version
 cargo --version
@@ -108,7 +121,13 @@ cargo --version
 For math-heavy lessons where Julia shines.
 
 ```bash
-curl -fsSL https://install.julialang.org | sh
+# macOS (Homebrew-first)
+brew install juliaup
+juliaup add release
+juliaup default release
+
+# Linux/WSL fallback
+# curl -fsSL https://install.julialang.org | sh
 
 julia -e 'println("Julia ", VERSION)'
 ```
