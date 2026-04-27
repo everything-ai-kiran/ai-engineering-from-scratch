@@ -35,6 +35,10 @@ their score for that area (e.g. "Math & Statistics: 2/2") before moving to the
 next round. Keep commentary short. Do not explain the answers until the very
 end.
 
+When presenting multiple-choice options, do not preselect, recommend, hint, or
+visually mark any option as the correct answer. All options must be shown in a
+neutral format.
+
 ---
 
 ### Round 1 -- Math & Statistics
